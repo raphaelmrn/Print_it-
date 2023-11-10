@@ -33,7 +33,7 @@ rightArrow.addEventListener('click', () => {
 })
 
 slides.forEach((slide, index) => {
-  const dot = document.createElement('span');
+  const dot = document.createElement('button');
   dot.classList.add('dot');
   dot.addEventListener('click', () => {
     afficherSlide(index);
