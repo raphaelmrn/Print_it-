@@ -24,6 +24,7 @@ let currentIndex = 0;
 
 const leftArrow = document.getElementById('left-arrow');
 leftArrow.addEventListener('click',() => {
+	console.log('Clic sur la flèche gauche');
 	afficherSlide(currentIndex - 1);
 })
 
@@ -56,12 +57,5 @@ function afficherSlide(index) {
   dots.forEach((dot, i) => {
     dot.classList.toggle('active', i === currentIndex);
   });
-}
-
-const dots = dotsContainer.querySelectorAll('.dot');
-dots.forEach((dot, i) => {
-	dot.classList.toggle('active', i === index);
-});
-
-
+};
 afficherSlide(0);
